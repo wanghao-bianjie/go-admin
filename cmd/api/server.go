@@ -17,6 +17,7 @@ import (
 	"github.com/go-admin-team/go-admin-core/sdk/pkg"
 	"github.com/go-admin-team/go-admin-core/sdk/runtime"
 	"github.com/spf13/cobra"
+	"go-admin/app/myapp/lib/sw"
 
 	"go-admin/app/admin/models"
 	"go-admin/app/admin/router"
@@ -85,6 +86,8 @@ func run() error {
 	for _, f := range AppRouters {
 		f()
 	}
+
+	sw.Init(ext.ExtConfig.SWServer.Endpoint)
 
 	srv := &http.Server{
 		Addr:    fmt.Sprintf("%s:%d", config.ApplicationConfig.Host, config.ApplicationConfig.Port),

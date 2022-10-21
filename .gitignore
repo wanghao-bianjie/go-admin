@@ -9,9 +9,9 @@ go-admin.exe
 temp/
 !temp
 vendor
-config/settings.dev.yml
+#config/settings.dev.yml
 common/middleware/demo.go
-config/settings.dev.*.yml
+#config/settings.dev.*.yml
 config/settings.dev.*.yml.log
 temp/logs
 config/settings.dev.yml.log
